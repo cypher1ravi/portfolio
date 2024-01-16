@@ -41,12 +41,6 @@ $(document).ready(function () {
         loop: true
     });
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 200,
-        backSpeed: 60,
-        loop: true
-    });
     let currentIndex = 0;
     const images = $('#imageCarousel img');
     const totalImages = images.length;
@@ -56,18 +50,16 @@ $(document).ready(function () {
         images.eq(index).show();
     }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        showImage(currentIndex);
-    }
-
-    setInterval(nextImage, 3000);
-
+    var typed = new Typed(".typing-2", {
+        strings: ["Designer", "Developer", "Freelancer"],
+        typeSpeed: 150,
+        backSpeed: 60,
+        loop: true,
+        onStringTyped: function (arrayPos, self) {
+            // Trigger image change when each string is typed
+            showImage(arrayPos % totalImages);
+        }
+    });
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
