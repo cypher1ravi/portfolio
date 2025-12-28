@@ -357,6 +357,101 @@ section .title::after {
   margin: 10px 0 7px 0;
 }
 
+/* experience section styling */
+.experience {
+  color: #333;
+  background: #f8f8f8;
+}
+
+.experience .title::before {
+  /* darker line so it remains visible on light bg */
+  background: #111;
+}
+
+.experience .title::after {
+  background: #f8f8f8;
+  content: "where i worked";
+  color: crimson;
+}
+
+.experience .exp-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.experience .exp-card {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.experience .exp-card .box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+}
+
+.experience .exp-card .box:hover {
+  background: crimson;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.experience .exp-card .box:hover .exp-head h3,
+.experience .exp-card .box:hover .exp-date,
+.experience .exp-card .box:hover .exp-summary {
+  color: #fff;
+}
+
+.experience .exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.experience .exp-head h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.experience .exp-date {
+  color: crimson;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.experience .box p,
+.experience .box .exp-summary {
+  color: #333;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+  .experience .exp-card {
+    width: 100%;
+  }
+}
+
+.experience .box ul {
+  margin-left: 18px;
+  color: #d3d3d3;
+  line-height: 1.6;
+  padding-left: 18px;
+}
+
+.experience .box ul li {
+  margin-bottom: 8px;
+}
+
 /* skills section styling */
 
 .skills .title::after {
@@ -434,7 +529,8 @@ section .title::after {
 .skills-content .right .css::before {
   width: 80%;
 }
-.skills-content .right .bootstrap::before {
+
+.skills-content .right .tailwind::before {
   width: 80%;
 }
 
@@ -443,12 +539,36 @@ section .title::after {
 }
 
 .skills-content .right .react::before {
-  width: 50%;
+  width: 70%;
 }
 
+/* MERN Stack */
+.skills-content .right .mongodb::before {
+  width: 60%;
+}
+
+.skills-content .right .express::before {
+  width: 60%;
+}
+
+.skills-content .right .node::before {
+  width: 65%;
+}
+
+/* Database */
 .skills-content .right .mysql::before {
   width: 50%;
 }
+
+/* DevOps / Deployment */
+.skills-content .right .docker::before {
+  width: 55%;
+}
+
+.skills-content .right .deploy::before {
+  width: 60%;
+}
+
 
 /* projects section styling */
 .projects .title::after {
