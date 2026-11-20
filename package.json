@@ -20,12 +20,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "22.x || 24.x"
   }
 }
