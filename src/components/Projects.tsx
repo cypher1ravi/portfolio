@@ -34,20 +34,19 @@ function Row({ p, n }: { p: Project; n: number }) {
 
       <div className="relative col-span-3 col-start-1 md:col-span-1 md:col-start-auto">
         <p className="text-muted">{p.text}</p>
-        {p.live ? (
-          <p className="mt-2 break-all text-sm font-medium text-ink-2 underline decoration-ink/20 underline-offset-4 transition-colors group-hover:text-orange group-hover:decoration-orange">
+        {p.stack && (
+          <ul className="mt-3 flex flex-wrap gap-2" aria-label="Tech stack">
+            {p.stack.map((s) => (
+              <li key={s} className="rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink-2">
+                {s}
+              </li>
+            ))}
+          </ul>
+        )}
+        {p.live && (
+          <p className="mt-3 break-all text-sm font-medium text-ink-2 underline decoration-ink/20 underline-offset-4 transition-colors group-hover:text-orange group-hover:decoration-orange">
             {displayUrl(p.live)}
           </p>
-        ) : (
-          p.stack && (
-            <ul className="mt-3 flex flex-wrap gap-2" aria-label="Tech stack">
-              {p.stack.map((s) => (
-                <li key={s} className="rounded-full border border-ink/15 px-3 py-1 text-xs font-medium text-ink-2">
-                  {s}
-                </li>
-              ))}
-            </ul>
-          )
         )}
       </div>
 

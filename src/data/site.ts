@@ -156,6 +156,20 @@ export const projects: Project[] = [
     stack: ["MongoDB", "Express", "React", "Node.js"],
   },
   {
+    title: "Uptime Monitor & Status Page",
+    tag: "Monitoring · Serverless",
+    text: "Checks my sites every minute from Cloudflare's network, keeps 90 days of history and sends a Telegram alert only when a site goes down or comes back. The public status page shows live uptime and response times.",
+    stack: ["Cloudflare Workers", "Cron Triggers", "D1 (SQLite)", "Hono", "TypeScript", "Telegram Bot API"],
+    live: "https://uptime-monitor.ravindrachaubey.workers.dev",
+  },
+  {
+    title: "Pulse Analytics",
+    tag: "Analytics · Privacy-first",
+    text: "Cookie-free web analytics running on this portfolio. A 1 KB tracker sends page views to a Cloudflare Worker that stores them without IP addresses, plus a stats API for visitors, pages, referrers and countries.",
+    stack: ["Cloudflare Workers", "D1 (SQLite)", "Hono", "TypeScript", "Web Crypto"],
+    live: "https://github.com/cypher1ravi/pulse-analytics",
+  },
+  {
     title: "Folify",
     tag: "Portfolio builder",
     text: "A tool that generates a personal portfolio website from your details, with no code required.",

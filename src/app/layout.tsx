@@ -104,6 +104,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <SmoothScroll>{children}</SmoothScroll>
+        {/* Pulse: my own cookie-free analytics (github.com/cypher1ravi/pulse-analytics). Skips localhost. */}
+        <script
+          defer
+          src="https://pulse-analytics.ravindrachaubey.workers.dev/pulse.js"
+          data-endpoint="https://pulse-analytics.ravindrachaubey.workers.dev/collect"
+        />
       </body>
     </html>
   );

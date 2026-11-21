@@ -9,21 +9,21 @@
 <style>
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Inter", Arial, sans-serif; color: #2a2826; font-size: 10.3pt; line-height: 1.45; }
-  .page { width: 210mm; min-height: 297mm; padding: 16mm 17mm 14mm; }
+  body { font-family: "Inter", Arial, sans-serif; color: #2a2826; font-size: 10pt; line-height: 1.4; }
+  .page { width: 210mm; min-height: 297mm; padding: 13mm 16mm 10mm; }
   a { color: inherit; text-decoration: none; }
 
-  header { border-bottom: 2px solid #e8590c; padding-bottom: 10px; margin-bottom: 14px; }
+  header { border-bottom: 2px solid #e8590c; padding-bottom: 8px; margin-bottom: 10px; }
   h1 { font-size: 24pt; font-weight: 700; letter-spacing: -0.3px; line-height: 1.1; }
   .role { font-size: 12pt; font-weight: 500; color: #c2410c; margin-top: 3px; }
   .contact { margin-top: 8px; font-size: 9.4pt; color: #4a4540; display: flex; flex-wrap: wrap; gap: 4px 14px; }
 
-  section { margin-top: 13px; }
+  section { margin-top: 10px; }
   h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #2a2826;
-       border-bottom: 1px solid #ddd5c8; padding-bottom: 3px; margin-bottom: 7px; }
+       border-bottom: 1px solid #ddd5c8; padding-bottom: 3px; margin-bottom: 6px; }
   p.summary { color: #3a3734; }
 
-  .item { margin-bottom: 9px; }
+  .item { margin-bottom: 7px; }
   .item:last-child { margin-bottom: 0; }
   .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .title { font-weight: 600; font-size: 10.6pt; }
@@ -94,6 +94,14 @@
         <div class="row"><span class="title">Folify</span><a class="link" href="https://folify-gen.vercel.app/">folify-gen.vercel.app</a></div>
         <p>Portfolio builder that generates a personal portfolio website from a user's details.</p>
       </div>
+      <div>
+        <div class="row"><span class="title">Uptime Monitor &amp; Status Page</span><a class="link" href="https://uptime-monitor.ravindrachaubey.workers.dev">uptime-monitor.ravindrachaubey.workers.dev</a></div>
+        <p>Checks sites every minute on Cloudflare Workers (Cron Triggers, D1), with Telegram alerts on outages and a public status page.</p>
+      </div>
+      <div>
+        <div class="row"><span class="title">Pulse Analytics</span><a class="link" href="https://github.com/cypher1ravi/pulse-analytics">github.com/cypher1ravi/pulse-analytics</a></div>
+        <p>Cookie-free web analytics on Cloudflare Workers and D1: 1 KB tracker, no IPs stored, stats API for visitors, pages and referrers.</p>
+      </div>
     </div>
   </section>
 
@@ -103,7 +111,7 @@
       <dt>Frontend</dt><dd>HTML, CSS, JavaScript, React, Redux, Tailwind CSS, Bootstrap, Material-UI, jQuery</dd>
       <dt>Backend</dt><dd>Node.js, Express.js, Fastify, REST APIs, Role-based access control (RBAC)</dd>
       <dt>Data</dt><dd>MongoDB, MySQL, Redis, BigQuery, Google Pub/Sub</dd>
-      <dt>DevOps &amp; tools</dt><dd>Docker, Traefik, bare-metal servers, Grafana, Git, GitHub, Vercel, Netlify, Render, AWS</dd>
+      <dt>DevOps &amp; tools</dt><dd>Docker, Traefik, bare-metal servers, Cloudflare Workers, Grafana, Git, GitHub, Vercel, Netlify, Render, AWS</dd>
     </dl>
   </section>
 
